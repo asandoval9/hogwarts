@@ -36,7 +36,7 @@ public class StudentControllerTest {
         StudentEntity studentEntity = new StudentEntity("Harry", "Potter");
 
         given(service.getStudentById(2))
-                .willReturn(new StudentEntity("Harry", "Potter"));
+                .willReturn(studentEntity);
 
         mvc.perform(get("/student/2")
                 .contentType(MediaType.APPLICATION_JSON))
